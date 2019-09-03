@@ -28,7 +28,7 @@ try:
 			msg2 = 'On'
 			print('Turning Lights On')
 			pb.push_note("Home Automation System","Light is On!!")
-			gpio.output(40, 0)
+			gpio.output(40, 0)				#Relay is in NO mode hence low command to switch On
 		while(entered):
 			time.sleep(0.5)
 			pushes = pb.get_pushes()
@@ -39,7 +39,7 @@ try:
 				msg2 = 'Off'
 				print('Turning Lights Off')
 				pb.push_note("Home Automation System","Light is Off!!")
-				gpio.output(40, 1)
+				gpio.output(40, 1)			#Relay is in NO mode hence high command to switch Off
 				
 finally:
 	gpio.cleanup()
