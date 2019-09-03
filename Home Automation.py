@@ -13,11 +13,7 @@ gpio.setmode(gpio.BOARD)
 gpio.setup(16, gpio.IN)			#input from IR sensor
 gpio.setup(40, gpio.OUT)		#output to electric bulb
 gpio.setwarnings(False)
-gpio.output(40, 0)
-
 time.sleep(1.5)
-print("Ready")
-gpio.output(40, 1)
 try:
 	entered = False
 	while True:
